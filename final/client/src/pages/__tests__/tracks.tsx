@@ -3,7 +3,28 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { InMemoryCache, gql } from '@apollo/client';
 import { renderApolloWithRouter, cleanup, waitForElement } from '../../utils/test-utils';
+<<<<<<< HEAD:final/client/src/pages/__tests__/tracks.tsx
 import Tracks, { TRACKS} from '../tracks';
+=======
+import Tracks from '../tracks';
+
+/** Best practice is to export this operation from the component file. We've defined it separately to remain consistent with the course content. */
+const TRACKS = gql`
+  query getTracks {
+    tracksForHome {
+      id
+      title
+      thumbnail
+      length
+      modulesCount
+      author {
+        name
+        photo
+      }
+    }
+  }
+`;
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e:final/client/src/pages/__tests__/tracks.js
 
 const mockTrack = {
   id: 'c_0',

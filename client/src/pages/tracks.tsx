@@ -1,12 +1,21 @@
+<<<<<<<< HEAD:client/src/pages/tracks.tsx
 import React from "react";
 import { Layout } from "../components";
+========
+import React from 'react';
+import { Layout } from '../components';
+>>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e:final/client/src/pages/tracks.tsx
 import QueryResult from "../components/query-result";
 import { gql } from "../__generated__";
 import { useQuery } from "@apollo/client";
 import TrackCard from "../containers/track-card";
 
 /** TRACKS query to retrieve all tracks */
+<<<<<<<< HEAD:client/src/pages/tracks.tsx
 export const TRACKS = gql(`
+========
+const TRACKS = gql(`
+>>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e:final/client/src/pages/tracks.tsx
   query GetTracks {
     tracksForHome {
       id

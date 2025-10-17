@@ -3,16 +3,28 @@ import styled from "@emotion/styled";
 import { colors, mq } from "../styles";
 import { humanReadableTimeFromSeconds } from "../utils/helpers";
 import type { Track } from "../__generated__/graphql";
+<<<<<<< HEAD
+=======
+import { Link } from "react-router-dom";
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e
 
 /**
  * Track Card component renders basic info in a card format
  * for each track populating the tracks grid homepage.
  */
+<<<<<<< HEAD
 const TrackCard: React.FC<{ track: Track }> = ({ track }) => {
   const { title, thumbnail, author, length, modulesCount } = track;
 
   return (
     <CardContainer>
+=======
+const TrackCard: React.FC<{ track: Omit<Track, "modules"> }> = ({ track }) => {
+  const { title, thumbnail, author, length, modulesCount, id } = track;
+
+  return (
+    <CardContainer to={`/track/${id}`}>
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e
       <CardContent>
         <CardImageContainer>
           <CardImage src={thumbnail || ""} alt={title} />
@@ -38,7 +50,11 @@ const TrackCard: React.FC<{ track: Track }> = ({ track }) => {
 export default TrackCard;
 
 /** Track Card styled components */
+<<<<<<< HEAD
 const CardContainer = styled.div({
+=======
+const CardContainer = styled(Link)({
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e
   borderRadius: 6,
   color: colors.text,
   backgroundSize: "cover",
@@ -65,6 +81,10 @@ const CardContainer = styled.div({
     backgroundColor: colors.pink.lightest,
   },
   cursor: "pointer",
+<<<<<<< HEAD
+=======
+  textDecoration: "none",
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e
 });
 
 const CardContent = styled.div({

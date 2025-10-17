@@ -5,7 +5,11 @@ const config: CodegenConfig = {
   generates: {
     "./src/types.ts": {
       plugins: ["typescript", "typescript-resolvers"],
+<<<<<<< HEAD
        config: {
+=======
+      config: {
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e
         contextType: "./context#DataSourceContext",
         mappers: {
           Track: "./models#TrackModel",
@@ -16,4 +20,8 @@ const config: CodegenConfig = {
   },
 };
 
+<<<<<<< HEAD
 export default config;
+=======
+export default config;
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e

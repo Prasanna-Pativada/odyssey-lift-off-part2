@@ -34,7 +34,11 @@ const PageContainer = styled.div<LayoutProps>`
   flex-wrap: wrap;
   align-self: center;
   flex-grow: 1;
+<<<<<<< HEAD
   max-width: ${({ fullWidth }) => fullWidth ? null : `${widths.regularPageWidth}px`};
+=======
+  max-width: ${({ fullWidth }) => fullWidth ? undefined : `${widths.regularPageWidth}px`};
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e
   width: '100%';
   padding: ${({ fullWidth }) => fullWidth ? 0 : unit * 2};
   padding-bottom: unit * 5;

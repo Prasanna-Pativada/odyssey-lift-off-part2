@@ -8,7 +8,11 @@ import type { Track } from "../__generated__/graphql";
  * Track Card component renders basic info in a card format
  * for each track populating the tracks grid homepage.
  */
+<<<<<<< HEAD
 const TrackCard: React.FC<{ track: Track }> = ({ track }) => {
+=======
+const TrackCard: React.FC<{ track: Omit<Track, "modules"> }> = ({ track }) => {
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e
   const { title, thumbnail, author, length, modulesCount } = track;
 
   return (
@@ -65,6 +69,10 @@ const CardContainer = styled.div({
     backgroundColor: colors.pink.lightest,
   },
   cursor: "pointer",
+<<<<<<< HEAD
+=======
+  textDecoration: "none",
+>>>>>>> 35e2edfb2d127d0cfcc1783015508a9433b33d0e
 });
 
 const CardContent = styled.div({
